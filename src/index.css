@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --color-barka-50: #f0fdf4;
+  --color-barka-100: #dcfce7;
+  --color-barka-200: #bbf7d0;
+  --color-barka-300: #86efac;
+  --color-barka-400: #4ade80;
+  --color-barka-500: #0d9f4a;
+  --color-barka-600: #0a7a38;
+  --color-barka-700: #085f2c;
+  --color-barka-800: #064a22;
+  --color-barka-900: #043a1a;
+  --color-barka-950: #02210f;
+
+  --color-sand-50: #fdfcf8;
+  --color-sand-100: #f9f6ef;
+  --color-sand-200: #f0ead8;
+  --color-sand-300: #e6dcc0;
+  --color-sand-400: #d6c69f;
+  --color-sand-500: #c4ad7a;
+  --color-sand-800: #5a4d32;
+  --color-sand-900: #3d3320;
+
+  --color-ink-50: #f8f8f9;
+  --color-ink-100: #efeff1;
+  --color-ink-200: #d9dadf;
+  --color-ink-300: #b8bbc3;
+  --color-ink-400: #8e95a3;
+  --color-ink-500: #6b7282;
+  --color-ink-600: #4b5563;
+  --color-ink-700: #374151;
+  --color-ink-800: #1f2937;
+  --color-ink-900: #111827;
+  --color-ink-950: #030712;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-arabic: "IBM Plex Sans Arabic", "Noto Sans Arabic", sans-serif;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 1.5rem;
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 142 76% 34%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 40 33% 94%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 40 20% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 40 33% 94%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 142 76% 34%;
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-arabic);
+}
+
+/* Barka custom utilities */
+.barka-gradient {
+  background: linear-gradient(135deg, #0d9f4a 0%, #065f2a 100%);
+}
+.barka-gradient-soft {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+.barka-shadow {
+  box-shadow: 0 4px 24px rgba(13, 159, 74, 0.12), 0 1px 2px rgba(0,0,0,0.04);
+}
+.barka-shadow-lg {
+  box-shadow: 0 16px 48px rgba(13, 159, 74, 0.14), 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
