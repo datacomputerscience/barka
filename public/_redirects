@@ -1,1 +1,2 @@
-/* /index.html 200
+# Cloudflare Pages SPA - using 404.html fallback instead of redirect to avoid infinite loop
+# This file intentionally left minimal - SPA handled via 404.html

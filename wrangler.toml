@@ -1,19 +1,10 @@
-# Barka - Cloudflare Pages / Workers Configuration
+# Barka - Cloudflare Pages Configuration
+# This file is for Pages - must include pages_build_output_dir
+
 name = "barka"
-type = "javascript"
 compatibility_date = "2024-01-01"
+pages_build_output_dir = "./dist"
 
-# For Pages, this is optional - Pages uses its own build config
-# But if you want to use Workers with static assets:
-
-[site]
-bucket = "./dist"
-
-# Build configuration for Cloudflare Pages (also set in dashboard)
-[build]
-command = "npm run build"
-# Output directory is set in dashboard as "dist"
-
-# Environment variables (set these in Cloudflare dashboard, not here)
-# VITE_SUPABASE_URL
-# VITE_SUPABASE_ANON_KEY
+# Build command is set in Cloudflare dashboard, not here
+# Build: npm run build
+# Output: dist
